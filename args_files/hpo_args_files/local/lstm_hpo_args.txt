@@ -1,0 +1,8 @@
+--model_type=lstm
+--perform_hpo
+--hpo_config_path=RIWWER_AP4_AP5_Joint/hpo_configs/lstm_hpo.yaml
+--hpo_trials=100
+--use_local_model
+--num_experiment_runs=1
+--checkpoint_dir=model_output/local
+--wandb_project_name=RIWWER_HPO_Local_Models_std

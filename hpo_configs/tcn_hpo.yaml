@@ -1,0 +1,45 @@
+# model independent parameters
+learning_rate:
+  type: float
+  values: [0.005, 0.1] # Range of values to search
+
+batch_size:
+  type: categorical
+  values: [256]
+
+weight_decay:
+  type: float
+  values: [0.001, 0.1]
+
+num_epochs:
+  type: categorical
+  values: [200]
+
+encoder_length:
+  type: categorical
+  values: [72]
+
+prediction_length:
+  type: categorical
+  values: [12]
+
+dropout:
+  type: float
+  values: [0.3, 0.6]
+
+# model specific parameters
+kernel_size:
+  type: categorical
+  values: [3, 4, 5]
+
+num_filters:
+  type: int
+  values: [3, 6]
+
+dilation_base:
+  type: int
+  values: [4, 7]
+
+weight_norm:
+  type: categorical
+  values: [True, False]

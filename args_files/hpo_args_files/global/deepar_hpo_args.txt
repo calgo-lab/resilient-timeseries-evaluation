@@ -1,0 +1,7 @@
+--model_type=deepar
+--perform_hpo
+--hpo_config_path=RIWWER_AP4_AP5_Joint/hpo_configs/deepar_hpo.yaml
+--hpo_trials=100
+--num_experiment_runs=1
+--checkpoint_dir=model_output/global
+--wandb_project_name=RIWWER_HPO_Global_Models_std

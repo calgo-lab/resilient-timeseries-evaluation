@@ -1,0 +1,49 @@
+# model independent parameters
+learning_rate:
+  type: float
+  values: [0.00001, 0.0005] # Range of values to search
+
+batch_size:
+  type: categorical
+  values: [256]
+
+weight_decay:
+  type: float
+  values: [0.001, 0.05]
+
+num_epochs:
+  type: categorical
+  values: [200]
+
+encoder_length:
+  type: categorical
+  values: [72]
+
+prediction_length:
+  type: categorical
+  values: [12]
+
+dropout:
+  type: float
+  values: [0.05, 0.3]
+
+# model specific parameters
+d_model:
+  type: categorical
+  values: [96, 120, 132, 144] # nhead and d_model must be divisible!
+
+nhead:
+  type: categorical
+  values: [3, 4, 6]
+
+num_encoder_layers:
+  type: int
+  values: [2, 4]
+
+num_decoder_layers:
+  type: int
+  values: [3, 6]
+
+dim_feedforward:
+  type: categorical
+  values: [1024, 2048, 4096]

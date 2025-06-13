@@ -1,0 +1,16 @@
+--errorgen_columns=['Herzog_Schieber_Position_pval', 'Herzog_Oberwasser_pval', 'Herzog_Unterwasser_pval', 'Herzog_Durchflußmenge_pval', 'Herzog_Berechnete_Durchflussmenge_pval', 'FLP_Hohenstand_Pumpensumpf_pval', 'FLP_P3_pval', 'FLP_P4_pval', 'FLP_P5_pval', 'FLP_Durchfluss_SWP1_und_SWP2_pval', 'FLP_Hohenstand_Becken1_pval', 'FLP_Hohenstand_Becken3_pval', 'FLP_Hohenstand_Beckne2_pval', 'Kaiserstr_Füllstand_SWS_pval', 'Kaiserstr_Füllstand_RWS_pval', 'Kaiserstr_P1_pval', 'Kaiserstr_P2_pval', 'Kaiserstr_P3_pval', 'Kaiserstr_P4_pval', 'Kaiserstr_P5_pval', 'Kaiserstr_P6_pval', 'Kreuzweg_Füllstand_Pumpensumpf_pval', 'Kreuzweg_Pumpe_1_pval', 'Kreuzweg_Pumpe_2_pval', 'Verlindenhof_Füllstand_Pumpensumpf_pval', 'Verlindenhof_Pumpe_1_pval', 'Verlindenhof_Pumpe_2_pval', 'Verlindenhof_Pumpe_3_pval', 'Niederschlag_mm', 'PV_15_Entleerung_RUEB_ival', 'PV_16_Regenueberlauf_Menge_ival', 'PV_19_Fuellstand_RUEB_2_ival', 'PV_20_Fuellstand_RUEB_3_ival', 'PV_25_Fuellstand_RRB_ival']
+--errorgen_missing_values
+--errorgen_missing_values_rate=[0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+--errorgen_outliers
+--errorgen_outliers_rate=[0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+--errorgen_outliers_coefficient=1.1
+--errorgen_outliers_noise_coeff=0.1
+--errorgen_clipping
+--errorgen_clipping_rate=[0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+--errorgen_clipping_lower_quantile=0.2
+--errorgen_clipping_upper_quantile=0.8
+--iterate_errorgen
+--iterate_error_cols
+--iterate_error_rates
+--wandb_project_name=RIWWER_errorgen_experiments_v3_forecasts
+--num_workers=255

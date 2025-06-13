@@ -1,0 +1,49 @@
+# model independent parameters
+learning_rate:
+  type: float
+  values: [0.0005, 0.05] # Range of values to search
+
+batch_size:
+  type: categorical
+  values: [256]
+
+weight_decay:
+  type: float
+  values: [0.00001, 0.0002]
+
+num_epochs:
+  type: categorical
+  values: [200]
+
+encoder_length:
+  type: categorical
+  values: [72]
+
+prediction_length:
+  type: categorical
+  values: [12]
+
+dropout:
+  type: float
+  values: [0.1, 0.3]
+
+# model specific parameters
+hidden_size:
+  type: categorical
+  values: [42, 48, 54, 60] # hidden_size and num_attention_heads must be divisible
+
+lstm_layers:
+  type: categorical
+  values: [2, 3]
+
+num_attention_heads:
+  type: categorical
+  values: [2, 3]
+
+full_attention:
+  type: categorical
+  values: [True, False]
+
+hidden_continuous_size:
+  type: int
+  values: [12, 18]

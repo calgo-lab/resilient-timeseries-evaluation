@@ -1,0 +1,16 @@
+--model_type=transformer
+--num_experiment_runs=100
+--checkpoint_dir=model_output/global
+--learning_rate=2.3662359747607004e-05
+--weight_decay=0.011412315523930648
+--dropout=0.05083892210947347
+--encoder_length=72
+--prediction_length=12
+--batch_size=256
+--num_epoch=100
+--gradient_clip_val=0.01
+--d_model=132
+--nhead=3
+--num_encoder_layers=2
+--num_decoder_layers=3
+--dim_feedforward=4096
