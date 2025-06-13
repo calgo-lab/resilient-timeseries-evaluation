@@ -1,0 +1,37 @@
+# model independent parameters
+learning_rate:
+  type: float
+  values: [0.005, 0.05] # Range of values to search
+
+batch_size:
+  type: categorical
+  values: [256]
+
+weight_decay:
+  type: float
+  values: [0.00001, 0.0002]
+
+num_epochs:
+  type: categorical
+  values: [200]
+
+encoder_length:
+  type: categorical
+  values: [72]
+
+prediction_length:
+  type: categorical
+  values: [12]
+
+dropout:
+  type: float
+  values: [0.1, 0.3]
+
+# model specific parameters
+hidden_dim:
+  type: int
+  values: [20, 40]
+
+n_rnn_layers:
+  type: int
+  values: [1, 3]

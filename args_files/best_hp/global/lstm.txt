@@ -1,0 +1,13 @@
+--model_type=lstm
+--num_experiment_runs=100
+--checkpoint_dir=model_output/global
+--learning_rate=0.022833671865075685
+--weight_decay=0.00017515205892696694
+--dropout=0.2895269061642001
+--encoder_length=72
+--prediction_length=12
+--batch_size=256
+--num_epoch=100
+--gradient_clip_val=0.01
+--hidden_dim=33
+--n_rnn_layers=1
