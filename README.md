@@ -78,11 +78,43 @@ To see all available command line arguments, run:
 python main.py --help
 ```
 
-**TODO**
+### Training
+To train a model, use the following command:
+```bash
+python main.py --data_filename=<path_to_data_csv> --target=<target_column> --future_compatible_covariate=<list_of_future_compatible_covariates> --model_type=<model_type>
+```
+
+Where:
+- `<path_to_data_csv>`: Path to the CSV file containing the time series data.
+- `<target_column>`: The column in the CSV file that contains the target variable to be predicted.
+- `<list_of_future_compatible_covariates>`: A comma-separated list of covariates that are known in the future.
+- `<model_type>`: The type of model to be trained (e.g., `tft`, `transformer`, `lstm`, `nhits`, `tcn`, `deepar`).
+
+### Evaluation
+To evaluate a trained model, use the following command:
+```bash
+python main.py --data_filename=<path_to_data_csv> --target=<target_column> --future_compatible_covariate=<list_of_future_compatible_covariates> --model_type=<model_type> --inference_model_path=<path_to_model> 
+```
+
+Where:
+- `<path_to_data_csv>`: Path to the CSV file containing the time series data.
+- `<target_column>`: The column in the CSV file that contains the target variable to be predicted.
+- `<list_of_future_compatible_covariates>`: A comma-separated list of covariates that are known in the future.
+- `<model_type>`: The type of model to be trained (e.g., `tft`, `transformer`, `lstm`, `nhits`, `tcn`, `deepar`).
+- `<path_to_model>`: Path to the trained model file that you want to evaluate.
 
 ## Results
 
-**TODO**
+Here, we provide a summary of the results obtained from the experiments conducted with the different time series models on the dataset from the CSS in Duisburg, Germany. For the visualization and the discussion of the results, please refer to the paper.
+
+| Model type | MSE (q=0.25) Global | MSE (q=0.25) Local | MSE (median) Global | MSE (median) Local | MSE (q=0.75) Global | MSE (q=0.75) Local | Median MSE at Peak Events Global | Median MSE at Peak Events Local | Inference time [ms] Global | Inference time [ms] Local |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TFT | **0.28** | 0.48 | **0.30** | 0.50 | **0.34** | 0.53 | **0.67** | 1.23 | 2.36 | 0.94 |
+| Transformer | 0.60 | 0.62 | 0.61 | 0.63 | 0.61 | 0.64 | 1.38 | 1.41 | 0.87 | 0.88 |
+| LSTM | 0.51 | 0.63 | 0.64 | 0.79 | 0.83 | 0.99 | 1.15 | 1.42 | **0.81** | **0.81** |
+| N-HiTS | 0.67 | **0.48** | 0.68 | **0.48** | 0.69 | **0.49** | 1.43 | **1.23** | 0.85 | 0.83 |
+| TCN | 0.97 | 1.00 | 0.98 | 1.01 | 0.99 | 1.03 | 1.90 | 1.97 | 0.84 | 0.82 |
+| DeepAR | 1.14 | 1.28 | 1.31 | 1.45 | 1.56 | 1.64 | 2.07 | 2.13 | 0.88 | 0.88 |
 
 ## Repository Structure
 
