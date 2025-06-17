@@ -107,14 +107,47 @@ Where:
 
 Here, we provide a summary of the results obtained from the experiments conducted with the different time series models on the dataset from the CSS in Duisburg, Germany. For the visualization and the discussion of the results, please refer to the paper.
 
-| Model type | MSE (q=0.25) Global | MSE (q=0.25) Local | MSE (median) Global | MSE (median) Local | MSE (q=0.75) Global | MSE (q=0.75) Local | Median MSE at Peak Events Global | Median MSE at Peak Events Local | Inference time [ms] Global | Inference time [ms] Local |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| TFT | **0.28** | 0.48 | **0.30** | 0.50 | **0.34** | 0.53 | **0.67** | 1.23 | 2.36 | 0.94 |
-| Transformer | 0.60 | 0.62 | 0.61 | 0.63 | 0.61 | 0.64 | 1.38 | 1.41 | 0.87 | 0.88 |
-| LSTM | 0.51 | 0.63 | 0.64 | 0.79 | 0.83 | 0.99 | 1.15 | 1.42 | **0.81** | **0.81** |
-| N-HiTS | 0.67 | **0.48** | 0.68 | **0.48** | 0.69 | **0.49** | 1.43 | **1.23** | 0.85 | 0.83 |
-| TCN | 0.97 | 1.00 | 0.98 | 1.01 | 0.99 | 1.03 | 1.90 | 1.97 | 0.84 | 0.82 |
-| DeepAR | 1.14 | 1.28 | 1.31 | 1.45 | 1.56 | 1.64 | 2.07 | 2.13 | 0.88 | 0.88 |
+| Model type | MSE (q=0.25) Global | MSE (q=0.25) Local | MSE (median) Global | MSE (median) Local | MSE (q=0.75) Global | MSE (q=0.75) Local | Median MSE at Peak Events Global | Median MSE at Peak Events Local | Inference time [ms] Global | Inference time [ms] Local | Model Size [MB] Global | Model Size [MB] Local |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TFT | **0.28** | 0.48 | **0.30** | 0.50 | **0.34** | 0.53 | **0.67** | 1.23 | 2.36 | 0.94 | 11.36 | 6.22 |
+| Transformer | 0.60 | 0.62 | 0.61 | 0.63 | 0.61 | 0.64 | 1.38 | 1.41 | 0.87 | 0.88 | 144.26 | 184.59 |
+| LSTM | 0.51 | 0.63 | 0.64 | 0.79 | 0.83 | 0.99 | 1.15 | 1.42 | **0.81** | **0.81** | 0.32 | 0.16 |
+| N-HiTS | 0.67 | **0.48** | 0.68 | **0.48** | 0.69 | **0.49** | 1.43 | **1.23** | 0.85 | 0.83 | 1158.38 | 27.10 |
+| TCN | 0.97 | 1.00 | 0.98 | 1.01 | 0.99 | 1.03 | 1.90 | 1.97 | 0.84 | 0.82 | 0.07 | 0.04 |
+| DeepAR | 1.14 | 1.28 | 1.31 | 1.45 | 1.56 | 1.64 | 2.07 | 2.13 | 0.88 | 0.88 | 1.72 | 1.65 |
+
+- Predictive Performance, Computational Complexity and Robustness (for visualizations refer to the paper):
+    - Global:
+
+        | Model | MSE | CCI | RI |
+        | :--- | :--- | :--- | :--- |
+        | TFT | **0.30** | 0.50 | 0.27 |
+        | Transformer | 0.61 | 0.22 | 0.22 |
+        | LSTM | 0.64 | **0.14** | 0.82 |
+        | N-HiTS | 0.68 | 0.65 | 0.24 |
+        | TCN | 0.98 | 0.18 | **0.12** |
+        | DeepAR | 1.31 | 0.25 | 0.90 |
+
+        ---
+        - **MSE** = Mean Squared Error (lower is better)
+        - **CCI** = Computational Complexity Index (includes inference time and model size, lower is better)
+        - **RI** = Robustness Index (includes robustness to perturbations and IQR of the MSE, lower is better)
+
+    - Local:
+
+        | Model | MSE | CCI | IQR of the MSE |
+        | :--- | :--- | :--- | :--- |
+        | TFT | 0.50 | 0.32 | 0.06 |
+        | Transformer | 0.63 | 0.73 | **0.01** |
+        | LSTM | 0.79 | **0.17** | 0.36 |
+        | N-HiTS | **0.48** | 0.26 | **0.01** |
+        | TCN | 1.01 | 0.27 | 0.02 |
+        | DeepAR | 1.45 | 0.50 | 0.35 |
+
+        ---
+        - **MSE** = Mean Squared Error (lower is better)
+        - **CCI** = Computational Complexity Index (includes inference time and model size, lower is better)
+        - **IQR** = Interquartile Range (lower is better)
 
 ## Repository Structure
 
