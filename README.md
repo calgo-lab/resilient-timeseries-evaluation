@@ -1,7 +1,8 @@
 # Evaluating Time Series Models for Urban Wastewater Management: Predictive Performance, Model Complexity and Resilience
 Presented at the 10th International Conference on Smart and Sustainable Technologies (SpliTech 2025)
 
-[Paper link](doi.org/10.23919/SpliTech65624.2025.11091801)
+* [Paper link](https://doi.org/10.23919/SpliTech65624.2025.11091801)
+* [Preprint (arXiv)](https://doi.org/10.48550/arXiv.2504.17461)
 
 **Authors**: Vipin Singh, Tianheng Ling, Teodor Chiaburu, Felix Biessmann
 
