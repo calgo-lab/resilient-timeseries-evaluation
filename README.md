@@ -203,7 +203,8 @@ This work builds on a series of related publications, including our foundational
 
 2. Automated Energy-Aware Time-Series Model Deployment on Embedded FPGAs for Resilient Combined Sewer Overflow Management<br>
    **Authors:** Tianheng Ling, Vipin Singh, Chao Qian, Felix Biessmann, Gregor Schiele<br>
-   **Accepted at:** 11th IEEE International Smart Cities Conference 2025
+   **Accepted at:** 11th IEEE International Smart Cities Conference 2025<br>
+   [Github repository](https://github.com/tianheng-ling/EdgeOverflowForecast)
 
 ## Acknowledgement
 
