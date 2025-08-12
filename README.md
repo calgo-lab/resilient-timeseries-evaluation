@@ -1,6 +1,8 @@
 # Evaluating Time Series Models for Urban Wastewater Management: Predictive Performance, Model Complexity and Resilience
 Presented at the 10th International Conference on Smart and Sustainable Technologies (SpliTech 2025)
 
+[Preprint](https://doi.org/10.48550/arXiv.2504.17461)
+
 **Authors**: Vipin Singh, Tianheng Ling, Teodor Chiaburu, Felix Biessmann
 
 ---
@@ -16,6 +18,9 @@ Presented at the 10th International Conference on Smart and Sustainable Technolo
     * [Evaluation](#evaluation)
 * [Results](#results)
 * [Repository Structure](#repository-structure)
+* [Related Publications](#related-publications)
+* [Acknowledgement](#acknowledgement)
+* [Contact](#contact)
 
 ---
 
@@ -187,3 +192,23 @@ The repository is structured as follows (*only relevant files displayed*):
 * [`archives/`](./archives/): Contains notebooks and detailed analyses from various experimental stages.
     * [`errorgen_analysis/`](./archives/errorgen_analysis/): In-depth analysis of the error generation experiments, including plots and explanations of different error types.
     * [`wandb_visualizations/`](./archives/wandb_visualizations/): Notebooks and results related to visualizing experiment data.
+ 
+## Related Publications
+
+This work builds on a series of related publications, including our foundational research on methodologies and evaluation frameworks as well as our continued work that informs the current implementation.
+
+1. [Data-driven Modeling of Combined Sewer Systems for Urban Sustainability: An Empirical Evaluation](https://ceur-ws.org/Vol-3958/piai24-short1.pdf)<br>
+   **Authors:** Vipin Singh, Tianheng Ling, Teodor Chiaburu, Felix Biessmann<br>
+   **Published in:** 47th German Conference on AI (2nd Workshop on Public Interest AI) 2025
+
+2. Automated Energy-Aware Time-Series Model Deployment on Embedded FPGAs for Resilient Combined Sewer Overflow Management<br>
+   **Authors:** Tianheng Ling, Vipin Singh, Chao Qian, Felix Biessmann, Gregor Schiele<br>
+   **Accepted at:** 11th IEEE International Smart Cities Conference 2025
+
+## Acknowledgement
+
+This work is supported by the German Federal Ministry for Economic Affairs and Climate Action under the RIWWER project (01MD22007C, 01MD22007H).
+
+## Contact
+
+For questions or feedback, please feel free to open an issue or contact us at [vipin.singh@bht-berlin.de](mailto:vipin.singh@bht-berlin.de)
