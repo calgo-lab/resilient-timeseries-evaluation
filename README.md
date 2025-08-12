@@ -15,7 +15,8 @@ If you use this repository, please consider citing our paper:
   title={Evaluating Time Series Models for Urban Wastewater Management: Predictive Performance, Model Complexity and Resilience}, 
   year={2025},
   pages={1-6},
-  doi={10.23919/SpliTech65624.2025.11091801}}
+  doi={10.23919/SpliTech65624.2025.11091801}
+}
 ```
 
 ---
