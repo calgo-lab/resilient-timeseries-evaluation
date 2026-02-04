@@ -26,6 +26,7 @@ If you use this repository, please consider citing our paper:
 
 You can visit our publicly available web-dashboard showing a live simulation of our model's forecasts for historical events in Duisburg's Combined Sewer System from the year 2023:
 * [riwwer.demo.calgo-lab.de](https://riwwer.demo.calgo-lab.de)
+
 The GitHub to the demonstrator implementation: [calgo-lab/riwwer_ki_demo_frontend](https://github.com/calgo-lab/riwwer_ki_demo_frontend)
 
 ---
